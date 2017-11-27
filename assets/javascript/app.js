@@ -4,7 +4,7 @@ var wrong = 0;
 var answers = [];
 var myAnswers = [];
 
-var timerNumber = 60;
+var timerNumber = 90;
 var intervalId;
 
 var myQuestion = document.getElementById("questions");
@@ -44,7 +44,7 @@ document.getElementById("timerFunction").innerHTML = timerNumber;
         endGame();
     function endGame(){
     document.getElementById("questionHeader").innerHTML = 'Number correct: ' + correct + '<br>' + 'Number wrong: ' + wrong ;
-    document.getElementById("questions").innerHTML = 'Test';
+    document.getElementById("questions").innerHTML = '';
     document.getElementById("nextButton").innerHTML = '<a href="index.html">Start Over</a>';
     document.getElementById("prevButton").innerHTML = '';
 
@@ -74,7 +74,7 @@ function next() {
         endGame();
         function endGame(){
     document.getElementById("questionHeader").innerHTML = 'Number correct: ' + correct + '<br>' + 'Number wrong: ' + wrong ;
-    document.getElementById("questions").innerHTML = 'Test';
+    document.getElementById("questions").innerHTML = '';
     document.getElementById("nextButton").innerHTML = '<a href="index.html">Start Over</a>';
     document.getElementById("prevButton").innerHTML = '';
 
