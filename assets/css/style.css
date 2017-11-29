@@ -2,6 +2,14 @@ body {
 	background-image: url("../images/background.gif");
 }
 
+a {
+	color: #000;
+}
+
+a:hover {
+	color: #000;
+}
+
 h2 {
 	color: #fff;
 	font-family: 'Montserrat', sans-serif;
@@ -10,7 +18,7 @@ h2 {
 
 	margin-top: 5px;
 }
-.container {
+#container {
 	margin: auto;
 	width: 70%;
 }
@@ -29,68 +37,102 @@ h2 {
 	color: #fff;
 	margin: auto;
 	border-bottom: solid 5px;
+/*	background-color: #000;*/
+	clear: both;
+	padding-bottom: 40px;
+	margin-left: 0px;
+	width: 70%;
+}
+
+#solarSystem{
+	font-size: 50px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 900;
+	color: #fff;
+	margin: auto;
+	width: 100%;
+/*	background-color: #000;*/
+
+}
+
+#QUIZ {
+	font-size: 120px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 900;
+	color: #fff;
+	margin: auto;
+	width: 100%;
+/*	background-color: #000;*/
+
+	line-height: 68px;
+/*	margin-left: 15px;*/
+
 }
 
 .answers {
 	background: #fff;
-	margin: 20px;
-	padding: 20px;
+	margin: 10px;
+	padding: 25px 15px 25px 15px;
 	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
+	font-weight: 600;
 	font-size: 18px;
 
 }
 
 #answers_1:hover {
-	background: #fff;
+
 	background-color: #ccc;
 }
+
+#answers_1:active {
+
+	background-color:  #8391aa;
+}
+
+#answers_1:focused{
+
+	background-color: #8391aa;
+}
+
 #answers_2:hover {
-	background: #fff;
+
 	background-color: #ccc;
 }
 #answers_3:hover {
-	background: #fff;
+
 	background-color: #ccc;
 }
 #answers_4:hover {
-	background: #fff;
+
 	background-color: #ccc;
 }
 
 #questions {
 	margin-top: 30px;
 	margin: auto;
+	margin-left: 0px;
+	padding-bottom: 10px;
 	font-color: #000;
 	border-bottom: #fff solid 5px;
 }
 
 #nextButton {
 
+
 	margin: auto;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	margin-right: 0px;
 	margin-top: 20px;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
-	font-size: 22px;
-	float: right;
+	font-size: 34px;
+	background: #fff;
+	color: #000;
 
 }
 #nextButton:hover {
 
-	margin: auto;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	margin-top: 20px;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 700;
-	font-size: 22px;
 	background-color: #ccc;
+	font-style: none;
 
 }
 
@@ -107,8 +149,11 @@ h2 {
 	font-weight: 700;
 	font-size: 30px;
 	margin-top: 25px;
-	margin-left: 15px;
+	margin-left: 0px;
 	background: #000;
-	float: left;
 	width: 40%;
+}
+
+#clickBackground1 {
+	background: #ccc;
 }

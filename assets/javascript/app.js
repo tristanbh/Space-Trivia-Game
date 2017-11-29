@@ -65,6 +65,8 @@ console.log(timerNumber);
 
 timerRun();
 
+
+
 function next() {
     currentQuestion++;
     console.log('number correct: ' + correct);
@@ -123,6 +125,7 @@ function myAnswer1() {
     if (questionArray[currentQuestion][1] == answerId_1) {
         console.log('Correct Answer');
         correct++;
+
     } else {
         console.log('Wrong Answer');
         wrong++;
