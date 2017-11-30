@@ -1,3 +1,5 @@
+//varibles for storing events
+
 var currentQuestion = 0;
 let correct = 0;
 var wrong = 0;
@@ -6,6 +8,8 @@ var myAnswers = [];
 
 var timerNumber = 90;
 var intervalId;
+
+//html targets
 
 var myQuestion = document.getElementById("questions");
 var myHeader = document.getElementById("questionHeader");
@@ -23,67 +27,51 @@ document.getElementById("answers_4").addEventListener("click", myAnswer4);
 document.getElementById("nextButton").addEventListener("click", next);
 // document.getElementById("prevButton").addEventListener("click", previous);
 
+    function endGame(){
+    
+        document.getElementById("questionHeader").innerHTML = 'Number correct: ' + correct + '<br>' + 'Number wrong: ' + wrong ;
+        document.getElementById("questions").innerHTML = '';
+        document.getElementById("nextButton").innerHTML = '<a href="index.html">Start Over</a>';
+        }
+
+
+//timer function
 function timerRun() {
       intervalId = setInterval(decrement, 1000);
     }
-
 function decrement() {
-
-      //  Decrease number by one.
       timerNumber--;
-
-      //  Show the number in the #show-number tag.
 document.getElementById("timerFunction").innerHTML = timerNumber;
 
+//end timer and function
+
     if (timerNumber === 0) {
-
-        //  ...run the stop function.
-        stop();
-
-        //  Alert the user that time is up.
+    stop();
         endGame();
-    function endGame(){
-    document.getElementById("questionHeader").innerHTML = 'Number correct: ' + correct + '<br>' + 'Number wrong: ' + wrong ;
-    document.getElementById("questions").innerHTML = '';
-    document.getElementById("nextButton").innerHTML = '<a href="index.html">Start Over</a>';
-    document.getElementById("prevButton").innerHTML = '';
-
     }
 }
-}
-
-    function stop() {
-
-      //  Clears our intervalId
-      //  We just pass the name of the interval
-      //  to the clearInterval function.
+   function stop() {
       clearInterval(intervalId);
-    }
+  }
 
 
 console.log(timerNumber);
 
+//start timer
 timerRun();
 
 
-
+//next button function
 function next() {
     currentQuestion++;
     console.log('number correct: ' + correct);
     console.log('number wrong: ' + wrong);
     console.log(currentQuestion);
+
     if (currentQuestion === 10) {
         endGame();
-        function endGame(){
-    document.getElementById("questionHeader").innerHTML = 'Number correct: ' + correct + '<br>' + 'Number wrong: ' + wrong ;
-    document.getElementById("questions").innerHTML = '';
-    document.getElementById("nextButton").innerHTML = '<a href="index.html">Start Over</a>';
-    document.getElementById("prevButton").innerHTML = '';
 
-
-}
     } else {
-
 
     myHeader.innerHTML = questionArray [currentQuestion][(0)];
     answers_1.innerHTML = questionArray[currentQuestion][(2)];
@@ -93,17 +81,7 @@ function next() {
 }
 }
 
-// function previous() {
-//     currentQuestion--;
-//     console.log(currentQuestion);
-//     myHeader.innerHTML = questionArray[currentQuestion][(0)];
-//     answers_1.innerHTML = questionArray[currentQuestion][(2)];
-//     answers_2.innerHTML = questionArray[currentQuestion][(3)];
-//     answers_3.innerHTML = questionArray[currentQuestion][(4)];
-//     answers_4.innerHTML = questionArray[currentQuestion][(5)];
-//     // checkPage(currentQuestion);
-// }
-
+//questions, answer index, possible answers
 var questionArray = [
     ['What is the distance between the sun and earth?', 2, '66,550,000 miles', '92,960,000 miles', '1,000,000 miles', '26,320,000 miles'],
     ['What percent of the solar system’s mass does the Sun hold?', 4, '50.0%','12.6%', '64.5%', '99.8%'],
@@ -118,6 +96,9 @@ var questionArray = [
 
 ];
 
+//functions to check if box clicked is correct
+
+//first box
 function myAnswer1() {
     var answerId_1 = document.getElementById("1");
     answerId_1=1;
@@ -131,6 +112,8 @@ function myAnswer1() {
         wrong++;
     }
 }
+
+//second box
 function myAnswer2() {
     var answerId_2 = document.getElementById("2");
     answerId_2=2;
@@ -144,6 +127,8 @@ function myAnswer2() {
         wrong++;
     }
 }
+
+//third box
 function myAnswer3() {
     var answerId_3 = document.getElementById("3");
     answerId_3 = 3;
@@ -156,6 +141,8 @@ function myAnswer3() {
         wrong++;
     }
 }
+
+//fourth box
 function myAnswer4() {        
     var answerId_4 = document.getElementById("4");
     answerId_4 = 4;
@@ -169,7 +156,7 @@ function myAnswer4() {
         wrong++;
     }
 }
-
+//targets for questions
     myHeader.innerHTML = questionArray[currentQuestion][0];
     answers_1.innerHTML = questionArray[currentQuestion][(2)];
     answers_2.innerHTML = questionArray[currentQuestion][(3)];

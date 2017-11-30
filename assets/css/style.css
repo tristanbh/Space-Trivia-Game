@@ -37,7 +37,6 @@ h2 {
 	color: #fff;
 	margin: auto;
 	border-bottom: solid 5px;
-/*	background-color: #000;*/
 	clear: both;
 	padding-bottom: 40px;
 	margin-left: 0px;
@@ -51,7 +50,6 @@ h2 {
 	color: #fff;
 	margin: auto;
 	width: 100%;
-/*	background-color: #000;*/
 
 }
 
@@ -62,10 +60,8 @@ h2 {
 	color: #fff;
 	margin: auto;
 	width: 100%;
-/*	background-color: #000;*/
-
 	line-height: 68px;
-/*	margin-left: 15px;*/
+
 
 }
 
@@ -114,7 +110,11 @@ h2 {
 	padding-bottom: 10px;
 	font-color: #000;
 	border-bottom: #fff solid 5px;
+	width: 100%;
+
+
 }
+
 
 #nextButton {
 
